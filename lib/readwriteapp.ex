@@ -18,9 +18,8 @@ defmodule Readwriteapp do
   
   def write_file(destination_file, file_one, file_two) do
     File.write(destination_file, concat_file_content(file_one, file_two))
+    File.read(destination_file)
   end
 
 
 end
-
-Readwriteapp.write_file("result.txt", "one.txt", "two.txt")
